@@ -1,22 +1,33 @@
-html, body {
-    height: 100%;
-    margin: 0;
+html {
+  margin: 0;
 }
-body {
-    background-color: lightgray;
-    font-family: Arial, sans-serif;
+
+span {
+  display: block;
 }
-h1{
-    text-align: center;
-    color: rgb(255, 0, 230);
-    font-size: 2.5em;
+.canvas {
+  margin: 100px auto 100px;
+  width: 80%;
+  text-align: center;
 }
-#center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 200px;
-    width: 300px;
-    transform: translate(-50%, -50%);
-    border: 3px solid black;
+
+.button {
+  width: 100px;
+  height: 100px;
+  border: solid black 2px;
+  display: inline-block;
+}
+
+#grey {
+  background: grey;
+}
+
+#white {
+  background: white;
+}
+#blue {
+  background: blue;
+}
+#yellow {
+  background: yellow;
 }

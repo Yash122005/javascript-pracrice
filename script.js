@@ -1,18 +1,23 @@
-var rec = document.querySelector("#center");
+console.log('hitesh');
+const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
 
-rec.addEventListener("mousemove", function(event) {
-   var x = event.clientX;
-   var y = event.clientY;
-    var rect = rec.getBoundingClientRect();
-    var offsetX = x - rect.left;
-    var offsetY = y - rect.top;
-    var width = rect.width;
-    var ratio = offsetX / width;
-    var rgb = (r, g, b) => `rgb(${r}, ${g}, ${b})`;
-
-    if (offsetX < width / 2) {
-        rec.style.backgroundColor = rgb(Math.floor(255 * ratio), 0, 0);
-    }else {
-        rec.style.backgroundColor = rgb(0, 0, Math.floor(255 * (1 - ratio)));
+buttons.forEach(function (button) {
+  console.log(button);
+  button.addEventListener('click', function (e) {
+    console.log(e);
+    console.log(e.target);
+    if (e.target.id === 'grey') {
+      body.style.backgroundColor = e.target.id;
     }
+    if (e.target.id === 'white') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'blue') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'yellow') {
+      body.style.backgroundColor = e.target.id;
+    }
+  });
 });
